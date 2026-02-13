@@ -1,15 +1,59 @@
-# Prompts Used
+# 🧠 Prompts Used: Workflow Builder Lite
 
-| Timestamp | Prompt Text | Purpose |
-|---|---|---|
-| 2026-02-11 22:10 | "1️⃣ Step Registry (Extensible Architecture)... 2️⃣ Execution Trace View... 3️⃣ Run History (Persistent Memory)..." | Initial Project Concept & Architecture |
-| 2026-02-11 22:13 | "Build a Workflow Builder Lite web application..." | Initial Project Request & Requirements |
-| 2026-02-11 22:15 | "Create project directory structure..." | Project Initialization |
-| 2026-02-11 22:25 | "Setup Express server and middleware..." | Backend Implementation |
-| 2026-02-11 22:45 | "Setup Tailwind CSS and shadcn/ui..." | Frontend Setup |
-| 2026-02-11 22:50 | "Implement Workflow Creation Wizard..." | UI Feature Development |
-| 2026-02-13 11:31 | "Translate - Convert to different language, Simplify Language - Make more accessible/easier to read. add these steps remove key points and tag categories" | Feature Update Request |
-| 2026-02-13 12:00 | "run the server to check the changes" | Verification Request |
-| 2026-02-13 12:02 | "test this" | Automated Testing Request |
-| 2026-02-13 12:14 | "i have added my resume keep that resume in about.me" | Documentation Update Request |
-| 2026-02-13 12:20 | "* A short README: how to run... * A short AI_NOTES.md... * A PROMPTS_USED.md..." | Final Documentation Requirement |
+This document serves as a comprehensive log of the prompts and interactions used to design, build, debug, and deploy the **Workflow Builder Lite** application. It chronicles the journey from initial concept to a production-ready deployment on Render.
+
+## 🚀 Phase 1: Inception & Architecture
+**Goal:** Define the core requirements, tech stack, and architectural patterns.
+
+| Date | Prompt / Request | Outcome |
+| :--- | :--- | :--- |
+| **2026-02-11** | *"1️⃣ Step Registry (Extensible Architecture)... 2️⃣ Execution Trace View... 3️⃣ Run History (Persistent Memory)..."* | Defined the core pillars: Registry, Execution, and History. |
+| **2026-02-11** | *"Build a Workflow Builder Lite web application..."* | Established the full-stack requirements (React, Node.js, SQLite). |
+| **2026-02-11** | *"Create project directory structure..."* | Generated the monorepo structure (`backend` / `frontend`). |
+
+## 🛠️ Phase 2: Core Development
+**Goal:** Implement the backend API, frontend UI, and LLM integration.
+
+| Date | Prompt / Request | Outcome |
+| :--- | :--- | :--- |
+| **2026-02-11** | *"Setup Express server and middleware..."* | Created the Node.js/Express backend foundation. |
+| **2026-02-11** | *"Setup Tailwind CSS and shadcn/ui..."* | Configured the modern UI styling framework. |
+| **2026-02-11** | *"Implement Workflow Creation Wizard..."* | Developed the drag-and-drop workflow builder interface. |
+
+## ✨ Phase 3: Feature Enhancements
+**Goal:** Refine the application based on user feedback and add specific LLM capabilities.
+
+| Date | Prompt / Request | Outcome |
+| :--- | :--- | :--- |
+| **2026-02-13** | *"Translate - Convert to different language, Simplify Language - Make more accessible/easier to read. add these steps remove key points and tag categories"* | **Major Feature Update**: Replaced generic steps with specific "Translate" and "Simplify" actions. |
+| **2026-02-13** | *"run the server to check the changes"* | Verified backend logic for new step types. |
+| **2026-02-13** | *"test this"* | Performed end-to-end testing of the new features. |
+
+## 📝 Phase 4: Documentation & Personalization
+**Goal:** Polish the repository for public presentation.
+
+| Date | Prompt / Request | Outcome |
+| :--- | :--- | :--- |
+| **2026-02-13** | *"i have added my resume keep that resume in about.me"* | Integrated user's professional resume into `ABOUTME.md`. |
+| **2026-02-13** | *"A short README: how to run... A short AI_NOTES.md... A PROMPTS_USED.md..."* | Created comprehensive documentation suite. |
+| **2026-02-13** | *"make me a professional prompt_used file"* | **(Current)** Refined this document to be production-grade. |
+
+## ☁️ Phase 5: Deployment & DevOps (The "Render Saga")
+**Goal:** Deploy the full-stack application to Render.com and resolve production environment issues.
+
+> **Note:** This phase involved iterative debugging to adapt a local monorepo for a cloud environment.
+
+| Date | Prompt / Request | Implementation / Fix |
+| :--- | :--- | :--- |
+| **2026-02-13** | *"Deploy to Render"* | Created `render.yaml` and configured build scripts. |
+| **2026-02-13** | *"Error: Cannot find module 'dotenv'"* | **Fix 1:** Updated start command to `cd backend` before running node. |
+| **2026-02-13** | *"Error: Cannot find module 'dotenv'" (persisting)* | **Fix 2:** Updated start command to explicitly `npm install` inside backend. |
+| **2026-02-13** | *"PathError: Missing parameter name at index 1: *"* | **Fix 3:** Updated Express `app.get('*')` to `app.get(/(.*)/)` for compatibility with newer `path-to-regexp`. |
+| **2026-02-13** | *"Error: ENOENT: no such file .../frontend/dist/index.html"* | **Fix 4:** Added `build` script to root `package.json` to ensure frontend acts as part of the build pipeline. |
+| **2026-02-13** | *"sh: 1: vite: not found"* | **Fix 5:** Moved `vite` from `devDependencies` to `dependencies` and forced `npm install --include=dev` to ensure build tools exist in production. |
+| **2026-02-13** | *"Rollup failed to resolve import 'react-router-dom'"* | **Fix 6:** Installed missing runtime dependencies (`react-router-dom`, `lucide-react`, `clsx`, `tailwind-merge`). |
+| **2026-02-13** | *"App not connecting to backend"* | **Fix 7:** Updated `api.js` to use `import.meta.env.PROD` to dynamically switch between localhost and relative `/api` paths. |
+
+---
+*Generated by Google DeepMind's Agentic Coding Assistant*
+
