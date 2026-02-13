@@ -18,7 +18,10 @@ This document serves as a comprehensive log of the prompts and interactions used
 | :--- | :--- | :--- |
 | **2026-02-11** | *"Setup Express server and middleware..."* | Created the Node.js/Express backend foundation. |
 | **2026-02-11** | *"Setup Tailwind CSS and shadcn/ui..."* | Configured the modern UI styling framework. |
-| **2026-02-11** | *"Implement Workflow Creation Wizard..."* | Developed the drag-and-drop workflow builder interface. |
+| **2026-02-11** | *"Implement Workflow Creation Wizard with drag-and-drop capabilities using `dnd-kit`."* | Developed the intuitive workflow builder interface. |
+| **2026-02-11** | *"Create API endpoints for executing workflows and persisting run history."* | Implemented the execution engine and SQLite storage integration. |
+| **2026-02-12** | *"Design a responsive sidebar component for navigation and recent history."* | Enhanced UI navigation and user experience. |
+| **2026-02-12** | *"Refactor state management to use React Context for global workflow state."* | improved code maintainability and state consistency. |
 
 ## ✨ Phase 3: Feature Enhancements
 **Goal:** Refine the application based on user feedback and add specific LLM capabilities.
