@@ -22,10 +22,19 @@ app.use('/api/workflows', workflowRoutes);
 app.use('/api/runs', runRoutes);
 app.use('/api/status', statusRoute);
 
-// Basic route
-app.get('/', (req, res) => {
-  res.send('Workflow Builder Lite API running');
-});
+// Serve static files in production
+const path = require('path');
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../frontend/dist')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+  });
+} else {
+  // Basic route for dev
+  app.get('/', (req, res) => {
+    res.send('Workflow Builder Lite API running');
+  });
+}
 
 // Error handling middleware
 app.use((err, req, res, next) => {
