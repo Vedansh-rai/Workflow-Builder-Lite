@@ -82,3 +82,23 @@ You need to run both the backend and frontend servers in separate terminals.
 - User authentication
 - Drag-and-drop step reordering
 - Real-time streaming responses
+
+## Deployment
+
+### Render (Recommended)
+This repository is configured for effortless deployment on [Render](https://render.com/).
+
+1.  Sign up for Render.
+2.  Click **New +** -> **Web Service**.
+3.  Connect this repository.
+4.  Render will auto-detect the `render.yaml` and configure the build/start commands.
+5.  **Critical**: Add your environment variables (e.g., `GROQ_API_KEY`) in the Render dashboard.
+
+### Railway vs Render
+| Feature | Render | Railway |
+| :--- | :--- | :--- |
+| **Setup** | **Ready** (`render.yaml` included) | Requires configuration |
+| **Free Tier** | **Yes** (Free web services) | **Trial Only** ($5 credit) |
+| **Persistence** | Ephemeral (DB resets on deploy) | Persistent (Easy Postgres plugin) |
+
+**Note**: On Render's free tier, the SQLite database (`workflow-builder.db`) is ephemeral. It will reset whenever the server restarts or deploys. For persistent data, use a managed database like PostgreSQL (available on Railway or Render's paid tier).
