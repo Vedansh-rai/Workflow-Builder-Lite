@@ -2,7 +2,7 @@
   "name": "workflow-builder-lite-root",
   "version": "1.0.0",
   "scripts": {
-    "install-app": "npm install --prefix backend && npm install --prefix frontend",
+    "install-app": "npm install --prefix backend --include=dev && npm install --prefix frontend --include=dev",
     "build": "npm run install-app && npm run build-frontend",
     "build-frontend": "npm run build --prefix frontend",
     "start": "npm run install-app && npm run build-frontend && cd backend && node server.js",
