@@ -25,9 +25,9 @@ This document serves as a comprehensive log of the prompts and interactions used
 
 | Date | Prompt / Request | Outcome |
 | :--- | :--- | :--- |
-| **2026-02-13** | *"Translate - Convert to different language, Simplify Language - Make more accessible/easier to read. add these steps remove key points and tag categories"* | **Major Feature Update**: Replaced generic steps with specific "Translate" and "Simplify" actions. |
-| **2026-02-13** | *"run the server to check the changes"* | Verified backend logic for new step types. |
-| **2026-02-13** | *"test this"* | Performed end-to-end testing of the new features. |
+| **2026-02-13** | *"Implement 'Translate' and 'Simplify Language' steps; deprecate 'Extract Key Points' and 'Tag Category'."* | **Major Feature Update**: Replaced generic steps with specific "Translate" and "Simplify" actions. |
+| **2026-02-13** | *"Start the server to verify backend logic changes."* | Verified backend logic for new step types. |
+| **2026-02-13** | *"Initiate end-to-end testing."* | Performed end-to-end testing of the new features. |
 
 ## 📝 Phase 4: Documentation & Personalization
 **Goal:** Polish the repository for public presentation.
@@ -36,7 +36,6 @@ This document serves as a comprehensive log of the prompts and interactions used
 | :--- | :--- | :--- |
 | **2026-02-13** | *"i have added my resume keep that resume in about.me"* | Integrated user's professional resume into `ABOUTME.md`. |
 | **2026-02-13** | *"A short README: how to run... A short AI_NOTES.md... A PROMPTS_USED.md..."* | Created comprehensive documentation suite. |
-| **2026-02-13** | *"make me a professional prompt_used file"* | **(Current)** Refined this document to be production-grade. |
 
 ## ☁️ Phase 5: Deployment & DevOps (The "Render Saga")
 **Goal:** Deploy the full-stack application to Render.com and resolve production environment issues.
